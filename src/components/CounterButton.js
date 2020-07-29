@@ -10,16 +10,12 @@ class CounterButton extends PureComponent {
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     console.log(nextProps, nextState);
-    if (this.state.count !== nextState.count) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.state.count !== nextState.count;
   }
 
   updateCount = () => {
     // this.setState({count: this.state.count + 1});
-    this.setState(state => {
+    this.setState(() => {
       return {count: this.state.count + 1}
     });
   }

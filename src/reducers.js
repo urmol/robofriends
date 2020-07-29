@@ -32,5 +32,4 @@ export const requestRobots = (state = initialStateRobots, action = {}) => {
     default:
       return state;
   }
-
 }
